@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>communication</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="container header__container"><a class="header__logo" href=""> <img src="./img/header/logo.svg" alt=""></a>
+        <div class="header__right"> 
+          <nav class="nav"><a class="nav__link t-h active" href="#">Мои события </a><a class="nav__link t-h" href="#">Настроить расписание </a><a class="nav__link t-h" href="#">Группы </a><a class="nav__link t-h" href="#">Интергации </a><a class="nav__link t-h" href="#">Архив</a></nav>
+          <div class="header__user"> 
+            <div class="header__name t-h t-medium">Константин А.</div>
+            <div class="header__photo"><img src="./img/header/logo.png" alt=""></div>
+          </div>
+          <div class="header__burger" open-modal="modal--menu"><img src="./img/header/burger.svg" alt=""></div>
+        </div>
+      </div>
+    </header>
+    <div class="header-second">
+      <div class="container header__container">
+        <div class="header-second__nav"> <a class="header-second__nav-link active" href="#">Моё расписание </a><a class="header-second__nav-link" href="#">
+             На согласовании
+            <div class="header-second__nav-numbers">12</div></a></div>
+        <div class="header-second__right"> 
+          <label class="calendar input">
+            <input type="text" value="28 февраля">
+            <div class="calendar__ico"><img src="./img/header/calendar.svg" alt=""></div>
+          </label>
+          <div class="header__tabs"> <a class="header__tab active" href="#"> День</a><a class="header__tab header__tab--center" href="#"> Неделя</a><a class="header__tab" href="#"> Месяц</a></div>
+          <div class="header__list"><a class="header__item active" href="#"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#list"></use>
+              </svg></a><a class="header__item" href="#"> 
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#calendar"></use>
+              </svg></a></div>
+          <button class="header__create btn btn--gradient">
+            <svg> 
+              <use xlink:href="img/sprites/sprite.svg#plus"></use>
+            </svg>Создать
+          </button>
+          <button class="header__link"> 
+            <svg> 
+              <use xlink:href="img/sprites/sprite.svg#link"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-second__mobile"> 
+      <label class="calendar input">
+        <input type="text" value="28 февраля">
+        <div class="calendar__ico"><img src="./img/header/calendar.svg" alt=""></div>
+      </label>
+      <div class="header-second__mobile-bottom">
+        <button class="header__link"> 
+          <svg> 
+            <use xlink:href="img/sprites/sprite.svg#link"></use>
+          </svg>
+        </button>
+        <button class="header__create btn btn--gradient">
+          <svg> 
+            <use xlink:href="img/sprites/sprite.svg#plus"></use>
+          </svg>Создать
+        </button>
+      </div>
+    </div>
+    <form class="modal modal--setting">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="setting"> 
+            <div class="user">
+              <div class="user__photo">
+                <div class="user__photo-text">GO</div>
+              </div>
+              <div class="user__info"> 
+                <div class="user__name">
+                  <div class="input">
+                    <input class="t-h t-bold" type="text" disabled value="Константиноопльский Константин">
+                  </div>
+                </div>
+                <div class="user__email">
+                  <div class="input">
+                    <input class="t-h t-medium" type="text" disabled value="email@email.com">
+                  </div>
+                </div>
+                <div class="user__phone">
+                  <div class="input">
+                    <input class="t-h t-medium" type="text" disabled value="8 800 000 00 00">
+                  </div>
+                </div>
+                <div class="user__work">
+                  <div class="input">
+                    <input class="t-h t-medium" type="text" disabled value="Место работы">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__block">
+              <h3 class="h3 form__small-title">Настройки уведомлений</h3>
+              <div class="form__panel">
+                <p class="t-h">Уведамление на почту</p>
+                <label class="switcher">
+                  <input class="switcher__input" type="checkbox"/>
+                  <div class="switcher__bg"></div>
+                  <div class="switcher__circle"></div>
+                </label>
+              </div>
+              <div class="form__panel">
+                <p class="t-h">Уведамление по СМС</p>
+                <label class="switcher">
+                  <input class="switcher__input" type="checkbox"/>
+                  <div class="switcher__bg"></div>
+                  <div class="switcher__circle"></div>
+                </label>
+              </div>
+              <div class="form__panel">
+                <p class="t-h">Уведамление по PUSH</p>
+                <label class="switcher">
+                  <input class="switcher__input" type="checkbox"/>
+                  <div class="switcher__bg"></div>
+                  <div class="switcher__circle"></div>
+                </label>
+              </div>
+            </div>
+            <div class="form__block">
+              <h3 class="h3 form__small-title">Настройки уведомлений</h3>
+              <div class="form__panel">
+                <p class="t-h t-medium">Apple calendar</p>
+                <button class="btn btn--border"><span>Интегрировать</span></button>
+              </div>
+              <div class="form__panel">
+                <p class="t-h t-medium">Google calendar</p>
+                <button class="btn btn--border disabled"><span>Интегрировать</span></button>
+              </div>
+            </div>
+            <div class="form__block">
+              <h3 class="h3 form__small-title">Общие настройкии</h3>
+              <div class="form__panel">
+                <p class="t-h">Автоматически подтверждать события если время свободно</p>
+                <label class="switcher">
+                  <input class="switcher__input" type="checkbox"/>
+                  <div class="switcher__bg"></div>
+                  <div class="switcher__circle"></div>
+                </label>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <div class="select" select-top="select-top"> 
+                <div class="select__name">Часовой пояс</div>
+                <input type="hidden" value="(UTC +03:00) Москва, Санкт-Петербург"/>
+                <div class="select__main">(UTC +03:00) Москва, Санкт-Петербург</div>
+                <div class="select__drop panel" data-simplebar="data-simplebar">
+                  <div class="select__item active">(UTC +03:00) Москва, Санкт-Петербург</div>
+                  <div class="select__item">1asfasfasf</div>
+                  <div class="select__item">1asfasfasf</div>
+                  <div class="select__item">1asdasd</div>
+                  <div class="select__item">1</div>
+                  <div class="select__item">1asdasd</div>
+                  <div class="select__item">1asdasd</div>
+                  <div class="select__item">1asdasdasd</div>
+                </div>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Публичная страница</h3>
+              <div class="link__panel">
+                <div class="public__link link t-gradient t-medium">http/zoom asdfasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdasd</div>
+                <div class="public__btn">
+                  <button class="btn btn--border"><span>Скопировать</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient disabled">Сохранить</button>
+            <button class="btn btn--gradient">Отменить</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--succed">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--login">
+          <div class="form__logo"> <img src="./img/login/sucсes.svg" alt=""></div>
+          <h2 class="h2 form__title">Успешно !</h2>
+          <div class="form__title-text t-h">Заявка отправлена на рассмотрение</div>
+          <div class="form__enter"> 
+            <button class="btn btn--gradient btn--full">Продолжить</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="modal modal--month">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <h2 class="h2 modal__title">4 февраля</h2>
+          <div class="modal__month-list"> 
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--month">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <h2 class="h2 modal__title">4 февраля</h2>
+          <div class="modal__month-list"> 
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+            <div class="month-list__item"> 
+              <div class="month-list__head">
+                <div class="month-list__time">18.02  8:00 - 8:45</div>
+                <div class="month-list__cabinet">Звонок в ZOOM</div>
+              </div>
+              <div class="month-list__description">Название команды, длинное название события очень длинное назваиние длинное назваиние</div>
+              <div class="participants">
+                <div class="participant participant--orange">IR</div>
+                <div class="participant participant--blue">ON</div>
+                <div class="participant participant--purple">MA</div>
+                <div class="participant participant--yellow">N</div>
+                <div class="participant participant--green">GO</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="modal modal--event">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="event">
+            <div class="event__date-time"> 
+              <p>8:00 - 8:45</p>
+              <p>28.02.22</p>
+            </div>
+            <h2 class="h2 modal__title">Название события, длинное название события очень длинное назваиние</h2>
+            <div class="modal__descroption"> 
+              <p>Название события, длинное название события очень длинное назваиние Название события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное Название события, длинное название события очень длинное назваиние Название события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное </p>
+              <div class="modal__descroption-all link t-gradient t-medium">Читать полностью</div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Ссылка на совещание</h3>
+              <div class="link__panel">
+                <div class="public__link link t-gradient t-medium">http/zoom asdfasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdasd</div>
+                <div class="public__btn">
+                  <button class="btn btn--border"><span>Подключиться</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Участники</h3>
+              <div class="form__participants">
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient">Редактировать</button>
+            <button class="btn btn--border"><span>Отменить событие</span></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--event-edit">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="event">
+            <h2 class="h2 modal__title">Редактирование события</h2>
+            <label class="label">
+              <div class="input">
+                <input class="t-h t-medium" type="text" value="Название события">
+              </div>
+            </label>
+            <label class="label">
+              <div class="input">
+                <input class="t-h t-medium" type="text" value="Описание события">
+              </div>
+            </label>
+            <label class="label">
+              <div class="input">
+                <input class="t-h t-medium" type="text" value="Организация / пометка">
+              </div>
+            </label>
+            <div class="modal__select">
+              <div class="select"> 
+                <div class="select__name">Выбререте группу</div>
+                <input type="hidden" value="(UTC +03:00) Москва, Санкт-Петербург"/>
+                <div class="select__main">(UTC +03:00) Москва, Санкт-Петербург</div>
+                <div class="select__drop panel" data-simplebar="data-simplebar">
+                  <div class="select__item active">(UTC +03:00) Москва, Санкт-Петербург</div>
+                  <div class="select__item">1asfasfasf</div>
+                  <div class="select__item">1asfasfasf</div>
+                  <div class="select__item">1asdasd</div>
+                  <div class="select__item">1</div>
+                  <div class="select__item">1asdasd</div>
+                  <div class="select__item">1asdasd</div>
+                  <div class="select__item">1asdasdasd</div>
+                </div>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Участники</h3>
+              <div class="form__participants">
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label><a class="participant-all link t-gradient">Показать все</a>
+              </div>
+            </div>
+            <div class="form__block form__block-times">
+              <label class="label">
+                <div class="label__title t-m">Дата</div>
+                <div class="calendar input">
+                  <input type="text" value="28 февраля">
+                  <div class="calendar__ico"><img src="./img/header/calendar.svg" alt=""></div>
+                </div>
+              </label>
+              <label class="label">
+                <div class="label__title t-m">Продложительность</div>
+                <div class="input input-time">
+                  <input type="text" value="45 минут">
+                  <div class="input__ico"><img src="./img/modals/time.svg" alt=""></div>
+                </div>
+              </label>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Свободные отрезки времени</h3>
+              <div class="free-time"> 
+                <div class="shedule__item">8:00 - 8:45 </div>
+                <div class="shedule__item">9:00 - 9:45</div>
+                <div class="shedule__item">10:00 - 10:45</div>
+                <div class="shedule__item">11:00 - 11:45</div>
+                <div class="shedule__item">12:00 - 12:45</div>
+                <div class="shedule__item">13:00 - 13:45</div>
+                <div class="shedule__item">14:00 - 14:45</div>
+                <div class="shedule__item">15:00 - 15:45</div>
+              </div>
+              <div class="form__block-times">
+                <label class="label">
+                  <div class="label__title t-m">Начало </div>
+                  <div class="calendar input">
+                    <input type="text" value="8:00">
+                    <div class="calendar__ico"><img src="./img/modals/time.svg" alt=""></div>
+                  </div>
+                </label>
+                <label class="label">
+                  <div class="label__title t-m">Конец</div>
+                  <div class="input input-time">
+                    <input type="text" value="8:45">
+                    <div class="input__ico"><img src="./img/modals/time.svg" alt=""></div>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Создать ссылку на собвещание </h3>
+              <div class="form__small-description">Cсылка сгенерируется автоматически</div>
+              <div class="link__panel">
+                <div class="radios"> 
+                  <label class="radio t-h">
+                    <input type="radio" name="name_3"><span> </span>ZOOM
+                  </label>
+                  <label class="radio t-h">
+                    <input type="radio" name="name_3"><span> </span>Google meets
+                  </label>
+                  <label class="radio t-h">
+                    <input type="radio" name="name_3"><span> </span>Skype
+                  </label>
+                  <p class="t-grey t-h">или</p>
+                </div>
+                <button class="btn btn--border"><span>Другой сервис</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient">Сохранить</button>
+            <button class="btn btn--border"><span>Отменить</span></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--event-stream">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="event">
+            <div class="event__date-time"> 
+              <p>8:00 - 8:45</p>
+              <p>28.02.22</p>
+            </div>
+            <h2 class="h2 modal__title">Название события, длинное название события очень длинное назваиние</h2>
+            <div class="modal__descroption"> 
+              <p>Название события, длинное название события очень длинное назваиние Название события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное Название события, длинное название события очень длинное назваиние Название события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное </p>
+              <div class="modal__descroption-all link t-gradient t-medium">Читать полностью</div>
+            </div>
+            <div class="form__block"> 
+              <div class="stream__title"> 
+                <h3 class="h3 form__small-title">Ссылка на совещание</h3>
+                <div class="stream-time">13:13</div>
+              </div>
+              <div class="link__panel">
+                <div class="public__link link t-gradient t-medium">http/zoom asdfasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdasd</div>
+                <div class="public__btn">
+                  <button class="btn btn--border"><span>Подключиться</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Участники</h3>
+              <div class="form__participants">
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <div class="form__participant-radio radio"> 
+                    <input type="checkbox" name="name_2"><span> </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient">Редактировать</button>
+            <button class="btn btn--border"><span>Отменить событие</span></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--event-confirm">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="event">
+            <div class="event__date-time"> 
+              <p>8:00 - 8:45</p>
+              <p>28.02.22</p>
+            </div>
+            <h2 class="h2 modal__title">Название события, длинное название события очень длинное назваиние</h2>
+            <div class="modal__descroption"> 
+              <p>Название события, длинное название события очень длинное назваиние Название события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное Название события, длинное название события очень длинное назваиние Название события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное назваиниеНазвание события, длинное название события очень длинное </p>
+              <div class="modal__descroption-all link t-gradient t-medium">Читать полностью</div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Ссылка на совещание</h3>
+              <div class="link__panel">
+                <div class="public__link link t-gradient t-medium">http/zoom asdfasdasdasdasdasdasdasdadasdasdasdasdasdasdasdasdasdasdasd</div>
+                <div class="public__btn">
+                  <button class="btn btn--border"><span>Подключиться</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Участники</h3>
+              <div class="form__participants">
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин </div>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient">Подтвердить</button>
+            <button class="btn btn--border"><span>Отклонить</span></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--event-new">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="event">
+            <h2 class="h2 modal__title">Новое событие</h2>
+            <div class="form__block-items">
+              <label class="label label-name">
+                <div class="input__name">Имя <span>*</span></div>
+                <div class="input">
+                  <input class="t-h t-medium" type="text">
+                </div>
+              </label>
+              <label class="label label-name">
+                <div class="input__name">Фамилия <span>*</span></div>
+                <div class="input">
+                  <input class="t-h t-medium" type="text">
+                </div>
+              </label>
+            </div>
+            <label class="label label-name">
+              <div class="input__name">Email <span>*</span></div>
+              <div class="input">
+                <input class="t-h t-medium" type="text">
+              </div>
+            </label>
+            <label class="label label-name">
+              <div class="input__name">Должность / место работы</div>
+              <div class="input">
+                <input class="t-h t-medium" type="text">
+              </div>
+            </label>
+            <label class="label label-name">
+              <div class="input__name">Название события <span>*</span></div>
+              <div class="input">
+                <input class="t-h t-medium" type="text">
+              </div>
+            </label>
+            <label class="label label-name">
+              <div class="input__name">Описание события <span>*</span></div>
+              <div class="input">
+                <input class="t-h t-medium" type="text">
+              </div>
+            </label>
+            <div class="form__block form__block-times">
+              <label class="label">
+                <div class="label__title t-m">Дата</div>
+                <div class="calendar input">
+                  <input type="text" value="28 февраля">
+                  <div class="calendar__ico"><img src="./img/header/calendar.svg" alt=""></div>
+                </div>
+              </label>
+              <label class="label">
+                <div class="label__title t-m">Продложительность</div>
+                <div class="input input-time">
+                  <input type="text" value="45 минут">
+                  <div class="input__ico"><img src="./img/modals/time.svg" alt=""></div>
+                </div>
+              </label>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Создать ссылку на собвещание </h3>
+              <div class="form__small-description">Cсылка сгенерируется автоматически</div>
+              <div class="link__panel">
+                <div class="radios"> 
+                  <label class="radio t-h">
+                    <input type="radio" name="name_3"><span> </span>ZOOM
+                  </label>
+                  <label class="radio t-h">
+                    <input type="radio" name="name_3"><span> </span>Google meets
+                  </label>
+                  <label class="radio t-h">
+                    <input type="radio" name="name_3"><span> </span>Skype
+                  </label>
+                  <p class="t-grey t-h">или</p>
+                </div>
+                <button class="btn btn--border"><span>Другой сервис</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient">Отправить заявку</button>
+            <button class="btn btn--border"><span>Отменить</span></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--event-group active">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="event">
+            <h2 class="h2 modal__title">Светлые головы</h2>
+            <div class="form__block"> 
+              <label class="label label-name">
+                <div class="input__name">Светлые головы</div>
+                <div class="input">
+                  <input class="t-h t-medium" type="text">
+                </div>
+              </label>
+              <label class="label label-name">
+                <div class="input__name">Организация / пометка</div>
+                <div class="input">
+                  <input class="t-h t-medium" type="text">
+                </div>
+              </label>
+            </div>
+            <div class="form__block"> 
+              <div class="add-confirm">
+                <p class="t-h t-medium">Участники </p>
+                <div class="add-confirm__inputs">
+                  <label class="label">
+                    <div class="input">
+                      <input class="t-h t-medium" type="text" placeholder="Введите email участника команды">
+                    </div>
+                  </label>
+                  <button class="btn btn--border"><span>Добавить</span></button>
+                </div><a class="link t-gradient" href="#">Скопировать ссылку на приглашение</a>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Участники</h3>
+              <div class="form__participants">
+                <div class="participants__group">
+                  <div class="participants__group-title">Подтвердили</div>
+                  <label class="form__participant">
+                    <div class="form__participant-user">
+                      <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                      <div class="form__participant-name">Константинопольский Константин</div>
+                    </div>
+                    <div class="form__participant-radio radio"> 
+                      <input type="checkbox" name="name_2"><span> </span>
+                    </div>
+                  </label>
+                </div>
+                <div class="participants__group">
+                  <div class="participants__group-title">Не дали ответ</div>
+                  <label class="form__participant">
+                    <div class="form__participant-user">
+                      <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                      <div class="form__participant-name">Константинопольский Константин</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="participants__group disabled">
+                  <div class="participants__group-title">Отклонили</div>
+                  <label class="form__participant">
+                    <div class="form__participant-user">
+                      <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                      <div class="form__participant-name">Константинопольский Константин</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient">Сохранить</button>
+            <button class="btn btn--border"><span>Отменить</span></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--event-new-group">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="event">
+            <h2 class="h2 modal__title">Новая группа</h2>
+            <div class="form__block"> 
+              <label class="label label-name">
+                <div class="input__name">Светлые головы</div>
+                <div class="input">
+                  <input class="t-h t-medium" type="text">
+                </div>
+              </label>
+              <label class="label label-name">
+                <div class="input__name">Организация / пометка</div>
+                <div class="input">
+                  <input class="t-h t-medium" type="text">
+                </div>
+              </label>
+            </div>
+            <div class="form__block"> 
+              <div class="add-confirm">
+                <p class="t-h t-medium">Участники </p>
+                <div class="add-confirm__inputs">
+                  <label class="label">
+                    <div class="input">
+                      <input class="t-h t-medium" type="text" placeholder="Введите email участника команды">
+                    </div>
+                  </label>
+                  <button class="btn btn--border"><span>Добавить</span></button>
+                </div><a class="link t-gradient" href="#">Скопировать ссылку на приглашение</a>
+              </div>
+            </div>
+            <div class="form__block"> 
+              <h3 class="h3 form__small-title">Участники</h3>
+              <div class="form__participants">
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <button class="delete__partic"> <img src="./img/modals/delete.svg" alt=""></button>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <button class="delete__partic"> <img src="./img/modals/delete.svg" alt=""></button>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <button class="delete__partic"> <img src="./img/modals/delete.svg" alt=""></button>
+                </label>
+                <label class="form__participant">
+                  <div class="form__participant-user">
+                    <div class="form__participant-avatar form__participant-avatar--green">GO</div>
+                    <div class="form__participant-name">Константинопольский Константин</div>
+                  </div>
+                  <button class="delete__partic"> <img src="./img/modals/delete.svg" alt=""></button>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__bottom">
+            <button class="btn btn--gradient">Сохранить</button>
+            <button class="btn btn--border"><span>Отменить</span></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <form class="modal modal--menu">
+      <div class="modal__bg"></div>
+      <div class="modal__panel">
+        <div class="modal__close"> </div>
+        <div class="mobile-header">
+          <div class="mobile-header__info">
+            <div class="mobile-header__avatar"> <img src="./img/header/photo.png" alt="">
+              <div class="avavatr__edit"> <img src="./img/header/edit.svg" alt=""></div>
+            </div>
+            <div class="mobile-header__name">Константинольский К.</div>
+          </div>
+        </div>
+        <div class="form__wrap form__wrap--full" data-simplebar>
+          <div class="form__block"> 
+            <nav class="mobile-nav"><a class="mobile-nav__link active" href="#">Мои события </a><a class="mobile-nav__link" href="#">Настроить расписание</a><a class="mobile-nav__link" href="#">Группы</a><a class="mobile-nav__link" href="#">Интергации</a><a class="mobile-nav__link" href="#">Архив</a></nav>
+          </div>
+          <div class="form__block">
+            <h3 class="h3 form__small-title">Настройки уведомлений</h3>
+            <div class="form__panel">
+              <p class="t-h">Уведамление на почту</p>
+              <label class="switcher">
+                <input class="switcher__input" type="checkbox"/>
+                <div class="switcher__bg"></div>
+                <div class="switcher__circle"></div>
+              </label>
+            </div>
+            <div class="form__panel">
+              <p class="t-h">Уведамление по СМС</p>
+              <label class="switcher">
+                <input class="switcher__input" type="checkbox"/>
+                <div class="switcher__bg"></div>
+                <div class="switcher__circle"></div>
+              </label>
+            </div>
+            <div class="form__panel">
+              <p class="t-h">Уведамление по PUSH</p>
+              <label class="switcher">
+                <input class="switcher__input" type="checkbox"/>
+                <div class="switcher__bg"></div>
+                <div class="switcher__circle"></div>
+              </label>
+            </div>
+          </div>
+          <div class="form__block">
+            <h3 class="h3 form__small-title">Настройки уведомлений</h3>
+            <div class="form__panel">
+              <p class="t-h t-medium">Apple calendar</p>
+              <button class="btn btn--border"><span>Интегрировать</span></button>
+            </div>
+            <div class="form__panel">
+              <p class="t-h t-medium">Google calendar</p>
+              <button class="btn btn--border disabled"><span>Интегрировать</span></button>
+            </div>
+          </div>
+          <div class="form__block">
+            <h3 class="h3 form__small-title">Общие настройкии</h3>
+            <div class="form__panel">
+              <p class="t-h">Автоматически подтверждать события если время свободно</p>
+              <label class="switcher">
+                <input class="switcher__input" type="checkbox"/>
+                <div class="switcher__bg"></div>
+                <div class="switcher__circle"></div>
+              </label>
+            </div>
+          </div>
+          <div class="form__block"> 
+            <div class="select" select-top="select-top"> 
+              <div class="select__name">Часовой пояс</div>
+              <input type="hidden" value="(UTC +03:00) Москва, Санкт-Петербург"/>
+              <div class="select__main">(UTC +03:00) Москва, Санкт-Петербург</div>
+              <div class="select__drop panel" data-simplebar="data-simplebar">
+                <div class="select__item active">(UTC +03:00) Москва, Санкт-Петербург</div>
+                <div class="select__item">1asfasfasf</div>
+                <div class="select__item">1asfasfasf</div>
+                <div class="select__item">1asdasd</div>
+                <div class="select__item">1</div>
+                <div class="select__item">1asdasd</div>
+                <div class="select__item">1asdasd</div>
+                <div class="select__item">1asdasdasd</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form__bottom">
+          <button class="btn btn--gradient disabled">Выйти</button>
+        </div>
+      </div>
+    </form>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

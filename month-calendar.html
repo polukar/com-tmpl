@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Месяц список</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <main class="inner-page">
+      <div class="inner-headers">
+        <header class="header"> 
+          <div class="container header__container"><a class="header__logo" href=""> <img src="./img/header/logo.svg" alt=""></a>
+            <div class="header__right"> 
+              <nav class="nav"><a class="nav__link t-h active" href="#">Мои события </a><a class="nav__link t-h" href="#">Настроить расписание </a><a class="nav__link t-h" href="#">Группы </a><a class="nav__link t-h" href="#">Интергации </a><a class="nav__link t-h" href="#">Архив</a></nav>
+              <div class="header__user"> 
+                <div class="header__name t-h t-medium">Константин А.</div>
+                <div class="header__photo"><img src="./img/header/logo.png" alt=""></div>
+              </div>
+              <div class="header__burger" open-modal="modal--menu"><img src="./img/header/burger.svg" alt=""></div>
+            </div>
+          </div>
+        </header>
+        <div class="header-second">
+          <div class="container header__container">
+            <div class="header-second__nav"> <a class="header-second__nav-link active" href="#">Моё расписание </a><a class="header-second__nav-link" href="#">
+                 На согласовании
+                <div class="header-second__nav-numbers">12</div></a></div>
+            <div class="header-second__right"> 
+              <label class="calendar input">
+                <input type="text" value="28 февраля">
+                <div class="calendar__ico"><img src="./img/header/calendar.svg" alt=""></div>
+              </label>
+              <div class="header__tabs"> <a class="header__tab active" href="#"> День</a><a class="header__tab header__tab--center" href="#"> Неделя</a><a class="header__tab" href="#"> Месяц</a></div>
+              <div class="header__list"><a class="header__item active" href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#list"></use>
+                  </svg></a><a class="header__item" href="#"> 
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#calendar"></use>
+                  </svg></a></div>
+              <button class="header__create btn btn--gradient">
+                <svg> 
+                  <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                </svg>Создать
+              </button>
+              <button class="header__link"> 
+                <svg> 
+                  <use xlink:href="img/sprites/sprite.svg#link"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header-second__mobile"> 
+          <label class="calendar input">
+            <input type="text" value="28 февраля">
+            <div class="calendar__ico"><img src="./img/header/calendar.svg" alt=""></div>
+          </label>
+          <div class="header-second__mobile-bottom">
+            <button class="header__link"> 
+              <svg> 
+                <use xlink:href="img/sprites/sprite.svg#link"></use>
+              </svg>
+            </button>
+            <button class="header__create btn btn--gradient">
+              <svg> 
+                <use xlink:href="img/sprites/sprite.svg#plus"></use>
+              </svg>Создать
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="container">
+          <table class="month-calendar">
+            <thead class="month-calendar__thead"> 
+              <tr class="month-calendar__tr"> 
+                <th class="month-calendar__th">ПН</th>
+                <th class="month-calendar__th">ВТ</th>
+                <th class="month-calendar__th">СР</th>
+                <th class="month-calendar__th">ЧТ</th>
+                <th class="month-calendar__th">ПТ</th>
+                <th class="month-calendar__th">СБ</th>
+                <th class="month-calendar__th">ВС</th>
+              </tr>
+            </thead>
+            <tbody class="month-calendar__tbody"> 
+              <tr class="month-calendar__tr"> 
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">1.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">2.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">3.02</div>
+                  <div class="month-calendar__empty">Никаких событий не запланировано</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">4.02</div>
+                  <div class="month-calendar__empty">Никаких событий не запланировано</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">5.02</div>
+                  <div class="month-calendar__empty">Никаких событий не запланировано</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">6.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">7.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+              </tr>
+              <tr class="month-calendar__tr"> 
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">1.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">2.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">3.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">4.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">5.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">6.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">7.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+              </tr>
+              <tr class="month-calendar__tr"> 
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">1.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">2.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">3.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">4.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">5.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">6.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">7.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+              </tr>
+              <tr class="month-calendar__tr"> 
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">1.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">2.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">3.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">4.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">5.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">6.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">7.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+              </tr>
+              <tr class="month-calendar__tr"> 
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">1.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">2.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">3.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">4.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">5.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">6.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+                <td class="month-calendar__td">
+                  <div class="month-calendar__date">7.02</div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__panel">
+                    <div class="month-calendar__time">8:00 - 8:45</div>
+                    <div class="month-calendar__room">Ком. 1</div>
+                  </div>
+                  <div class="month-calendar__all t-gradient">Показать все</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
